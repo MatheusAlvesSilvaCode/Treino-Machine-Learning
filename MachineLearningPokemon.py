@@ -66,7 +66,6 @@ x_test_with_names['Predicted_Legendary'] = predicoes
 # Mostra apenas os Pokémon que o modelo classificou como lendários
 legendary_predicted = x_test_with_names[x_test_with_names['Predicted_Legendary'] == 1]
 print(legendary_predicted[['Pokemon', 'Predicted_Legendary']])
-print(len(legendary_predicted))
  
 
 
