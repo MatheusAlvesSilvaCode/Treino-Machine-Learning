@@ -11,10 +11,13 @@ data = pd.read_csv(r"C:\Users\mathe\Downloads\IMDB\imdb_top_5000_tv_shows.csv")
 df = data
 df_clean = df
 
-print(df_clean.shape)
 del df_clean['IMDbLink']
 del df_clean['Title_IMDb_Link']
 print(df_clean.shape)
 
-df_clean.dropna()
+df_clean.dropna() # Não existe valores nulos na tabela.
 print(F' PRINT PÓS DROPNA: {df_clean.shape}')
+
+features = ['startYear', 'endYear', 'rank']
+
+x = df_clean[features]
